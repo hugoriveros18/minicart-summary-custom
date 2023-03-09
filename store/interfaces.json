@@ -1,0 +1,6 @@
+{
+  "minicart-summary-custom": {
+    "component": "MinicartSummaryCustom",
+    "render": "client"
+  }
+}
