@@ -26,9 +26,9 @@ const MinicartSummaryCustom = () => {
       const listPrice = removeLastTwoNumbers(item.listPrice);
       const sellingPrice = removeLastTwoNumbers(item.sellingPrice);
       if(listPrice !== sellingPrice) {
-        descuentosOrderForm += listPrice - sellingPrice;
+        descuentosOrderForm += ((listPrice - sellingPrice) * item.quantity);
       }
-      subtotalOrderForm += listPrice;
+      subtotalOrderForm += listPrice * item.quantity;
     })
     setSubtotal(subtotalOrderForm);
     setDescuentos(descuentosOrderForm);
